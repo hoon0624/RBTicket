@@ -44,7 +44,48 @@
 }
 
 .ticketLists {
-  position: absolute;
+  position: relative;
   height: 100%;
+  width: 300px;
+  margin-top: 30px;
+  border-right: 2px solid gray;
+  overflow: auto;
+}
+
+.ticket-viewer {
+  margin-top: 50px;
+  height: 700px;
+  min-height: fit-screen;
   flex: 1 1 auto;
+  
+}
+
+.nav-bar {
+  width: 100%;
+  height: 60px;
+}
+
+section {
+  widows: 1012px;
+  margin:0;
+}
+
+.react-tix {
+  display: flex;
+}
+
+.special-fab {
+ 
+  background: transparent;
+  background-color: transparent;
+  color:black;
+}
+
+.rtf--mb__c{
+  background: transparent;
+  background-color: transparent;
+}
+
+.rtf {
+  background-color: transparent;
 }

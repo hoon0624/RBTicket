@@ -1,0 +1,67 @@
+.TicketViewer-from {
+  margin-top: 25px;
+  font-weight: bolder;
+}
+
+.TicketViewer-msg {
+  font-weight: bold;
+  color: #2980b9;
+  padding-bottom: 25px;
+}
+
+.ticket-viewer-js {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  padding-left: 65px;
+  
+}
+
+.from {
+  font-weight: bolder;
+  padding-bottom: 15px;
+
+}
+
+.title {
+  font-weight: bolder;
+  padding-bottom: 50px;
+}
+
+.message {
+  padding-bottom: 100px;
+}
+.top-toolbar {
+  margin-left: 3%;
+}
+
+.center-view {
+  margin-left: 3%;
+  min-height: 40%;
+  margin-bottom: 18%;
+
+}
+
+.bottom-toolbar {
+  display: flex;
+  justify-content: center;
+
+}
+
+.top-toolbar {
+  
+}
+
+
+.priority-div {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.priority-icon {
+  height: 24px;
+  width: 24px;
+  margin-top: 30px;
+}

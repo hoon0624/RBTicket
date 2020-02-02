@@ -1,27 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ShowChartIcon from '@material-ui/icons/ShowChart';
+import "./TicketViewer.css";
 
-function Ticket({id, from, message, read}) {
+function Ticket({id, ticket}) {
     return (
         <div className="ticket">
-            <dl className="meta dl horizontal">
-                <dt>From</dt>
-                <dd>{from}</dd>
-
-                <dt>Subject</dt>
-                <dd>{message}</dd>
-            </dl>
-            
+                <div> <b> Subject:  {ticket.title} </b></div>
+                <div>Sender: {ticket.name}</div>
+                <div className="priority-div"> Priority <ShowChartIcon className="priority-icon"/>: {ticket.priority}</div>
         </div>
     )
 }
 
 Ticket.propTypes = { 
     // id: PropTypes.number.isRequired,
-    from: PropTypes.string.isRequired,
-    time: PropTypes.number.isRequired,
-    message: PropTypes.string.isRequired,
+    ticket: PropTypes.object,
     read: PropTypes.string.isRequired,
+    resolved: PropTypes.bool
     
 };
 

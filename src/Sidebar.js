@@ -4,67 +4,58 @@ import { makeStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { FixedSizeList } from 'react-window';
+import { render } from '@testing-library/react';
+import Ticket from './Ticket'
 
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     height: '100%',
     // maxWidth: 300,
+    overflow: 'auto',
     backgroundColor: theme.palette.background.paper,
   },
 }));
 
-// const renderRow = ({tickets}) => {
-//   return tickets.map(ticket => (
-//      <ListItem primaryText={ticket.from} key={ticket.id} />
-//   ))}
-
-// function renderRow(props) {
-//   const { index, style } = props;
-//   return (
-//     <ListItem button style={style} key={index}>
-//       <ListItemText primary={`Item ${index + 1}`} />
-//     </ListItem>
-//   );
-// }
-
-const renderRow = ({tickets}) => {
+const RenderRow = ({ticket, openTicket }) =>  {
+  const handleOpen = () => {
+    return openTicket(ticket.id)
+  }
   return (
-    tickets.map(ticket => {
-      if(ticket) {
-        return (
-          <ListItem button style primaryText={ticket.from} key={ticket.id}/>
-        );
-      } 
-      else {
-        console.log("error");
-      }
-    })
+    <ListItem className="ticket" button onClick={handleOpen} key={ticket.id}>
+         <Ticket ticket={ticket}/>
+    </ListItem>
   );
 }
 
-renderRow.propTypes = {
-  index: PropTypes.number.isRequired,
-  style: PropTypes.object.isRequired,
+RenderRow.propTypes = {
+  ticket: PropTypes.object,
+  openTicket: PropTypes.func,
 };
 
-const VirtualizedList = ({tickets}) => {
+const Sidebar = ({tickets, openTicket }) => {
   const classes = useStyles();
   if(tickets) {
     return (
         <div className={classes.root}>
-        <FixedSizeList height={800} width={300} itemSize={70} itemCount={tickets.length}>
-            <renderRow ticket={tickets} /> 
-        </FixedSizeList>
+            <div>
+              {
+                 tickets.map( ticket => {
+                    return (<RenderRow ticket={ticket} openTicket={openTicket} />)
+                 })
+              }
+            </div>
         </div>
       );
   } else {
+      console.log("failed...");
       return null;
   }
 }
 
-VirtualizedList.propTypes = {
-    tickets: PropTypes.array
+Sidebar.propTypes = {
+    tickets: PropTypes.array,
+    openTicket: PropTypes.func
 }
 
-export default VirtualizedList;
+export default Sidebar;
