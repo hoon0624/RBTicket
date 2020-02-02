@@ -21,7 +21,8 @@ const TicketViewer = ({tickets, selectedTicketId, deleteTicket, handleDelete, ha
                 </div>
                 <div className="bottom-box-top-toolbar">
                     <p className="from">Date: {ticket.date}</p>
-                    <p className="title">Priority: {ticket.priority}</p>
+                    <p className="title">Type: {ticket.problem}</p>
+                    <p className="title">Team: {ticket.team}</p>
                 </div>
             </div>
             <div className="center-view">
