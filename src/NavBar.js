@@ -9,9 +9,8 @@ const NavBar = () => {
             </div>
 
             <ul>
-                <li className="li1"><a href="#">RBTicket</a></li>
-
-                
+                <li className="li1"><a href="http://localhost:3000/">RBTicket</a></li>
+                <li><img className="RBClogo" src={require('./RBClogo.png')} /></li>
             </ul>
         </div>
     );

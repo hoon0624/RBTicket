@@ -5,10 +5,10 @@ import './TicketViewer.css';
 import Button from '@material-ui/core/Button';
 import DeleteIcon from '@material-ui/icons/Delete';
 
+
 const TicketViewer = ({tickets, selectedTicketId, deleteTicket, handleDelete, handleEmail}) => {
 
     const ticket = tickets[selectedTicketId];
-   
 
     return (
         <div className="ticket-viewer-js">
