@@ -4,13 +4,14 @@ import PropTypes from "prop-types";
 import './TicketViewer.css';
 import Button from '@material-ui/core/Button';
 
+
 const Resolved = ({deleteTicket, selectedTicketId}) => {
     const handlePressed = () => {
         return deleteTicket({selectedTicketId})
     }
 
     return (
-        <Button className="resolved-btn" onClick={handlePressed} variant="contained" color="primary">
+        <Button size="large" className="resolved-btn" onClick={handlePressed} variant="contained" color="primary">
             Resolved!
         </Button>
     );
