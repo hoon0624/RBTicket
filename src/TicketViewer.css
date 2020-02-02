@@ -1,6 +1,6 @@
 .TicketViewer-from {
   margin-top: 25px;
-  font-weight: bolder;
+  /* font-weight: bolder; */
 }
 
 .TicketViewer-msg {
@@ -12,8 +12,6 @@
 .ticket-viewer-js {
   width: 100%;
   height: 100%;
-  margin: 10px;
-  padding-left: 65px;
   
 }
 
@@ -32,10 +30,23 @@
   padding-bottom: 100px;
 }
 .top-toolbar {
-  margin-left: 3%;
+  display: flex;
+  border-bottom: 1px double black;
+}
+
+.top-box-top-toolbar {
+  display: block;  
+  flex: 1 1 auto;
+}
+
+
+.bottom-box-top-toolbar {
+  display: block;  
+  flex: 1 1 auto;
 }
 
 .center-view {
+  padding-top: 2%;
   margin-left: 3%;
   min-height: 40%;
   margin-bottom: 18%;
@@ -48,9 +59,6 @@
 
 }
 
-.top-toolbar {
-  
-}
 
 
 .priority-div {
@@ -63,5 +71,25 @@
 .priority-icon {
   height: 24px;
   width: 24px;
-  margin-top: 30px;
+}
+
+.separator {
+  border-color: black;
+  border-bottom: 1px;
+}
+
+.delete-btn {
+  align-items: left;
+  justify-content: left;
+margin-right: 20px;
+}
+
+.email-btn {
+  margin-left: 20px;
+}
+
+.left-bottom-toolbar {
+  display: flex;
+  flex: 1 1 auto;
+  margin-left: 5%;
 }

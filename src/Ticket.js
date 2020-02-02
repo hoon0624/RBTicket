@@ -8,7 +8,8 @@ function Ticket({id, ticket}) {
         <div className="ticket">
                 <div> <b> Subject:  {ticket.title} </b></div>
                 <div>Sender: {ticket.name}</div>
-                <div className="priority-div"> Priority <ShowChartIcon className="priority-icon"/>: {ticket.priority}</div>
+            <div className="priority-div"> Priority: {ticket.priority}</div>
+            <ShowChartIcon className="priority-icon" />
         </div>
     )
 }

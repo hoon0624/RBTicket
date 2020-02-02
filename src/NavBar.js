@@ -8,10 +8,9 @@ const NavBar = () => {
                 <a href="#"><img className="resize" src="https://logonoid.com/images/rbc-logo.png"/></a>
             </div>
 
-        
             <ul>
                 <li className="li1"><a href="#">RBTicket</a></li>
-                <li><a href="#">Tickets</a></li>
+
                 
             </ul>
         </div>
