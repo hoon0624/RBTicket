@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.tickets {
+  margin-left: 300px;
+  margin-right: 100px;
+  position: absolute;
+}
+
+.ticketLists {
+  position: absolute;
+  height: 100%;
+  flex: 1 1 auto;
+}
