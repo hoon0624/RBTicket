@@ -13,7 +13,7 @@
     "@slack/interactive-messages": "^1.4.1",
     "@slack/web-api": "^5.7.0",
     "express": "^4.16.4",
-    "firebase-admin": "^8.9.2",
+    "firebase-admin": "^11.4.1",
     "node": "^13.7.0"
   }
 }
